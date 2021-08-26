@@ -1,0 +1,51 @@
+@model demomvc.Models.Matricula
+@{
+    ViewData["Title"] = "Matricula";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="text-center">
+    <h1 class="display-4">Formulario de Alumno</h1>
+
+    <form asp-controller="Matricula" asp-action="Create">
+        <label asp-for="Apellidos" class="form-label"></label>
+        <input asp-for="Apellidos" class="form-control form-control-sm" type="text" placeholder="" aria-label=".form-control-sm" />
+
+        <label asp-for="Nombres" class="control-label"></label>
+        <input asp-for="Nombres" class="form-control" />
+
+        <div>
+         <label asp-for="fecha_nacimiento" class="control-label"></label>
+         <input asp-for="fecha_nacimiento" class="form-control" placeholder="dd/mm/aaaa"/>  
+        </div>
+        
+        <div>
+                <label asp-for="dni" class="control-label"></label>
+                <input asp-for="dni" class="form-control" />
+        </div>
+        
+
+        <label asp-for="Genero" class="control-label"></label>
+        Masculino
+        <input asp-for="Genero" class="form-control" type="radio" value="M" />
+        Femenino
+        <input asp-for="Genero" class="form-control" type="radio" value="F" />
+        <div>
+            <select name="Carrera" class="form-select" aria-label="Default select example">
+                <option selected disabled>Seleccione su carrera</option>
+                <option value="S">Ingeniería de Computación y Sistemas</option>
+                <option value="I">Ingeniería Industrial</option>
+                <option value="A">Arquitectura</option>
+                <option value="Ae">Aeronáutica</option>
+            </select>
+        </div>
+        
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Registrar alumno</button> 
+        </div>              
+    </form>
+    <h1>@ViewData["Message"]</h1>
+
+</div>

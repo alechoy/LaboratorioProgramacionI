@@ -13,6 +13,6 @@ namespace demomvc.Data
         }
 
         public DbSet<demomvc.Models.Contacto> DataContactos { get; set; }
-
+        public DbSet<demomvc.Models.Matricula> DataMatricula { get; set; }
     }
 }

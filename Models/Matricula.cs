@@ -5,8 +5,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace demomvc.Models
 {
-    [Table("t_contacto")]
-    public class Contacto
+    [Table("t_alumno")]
+    public class Matricula
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("id")]  
@@ -14,15 +14,15 @@ namespace demomvc.Models
         [Column("apellidos")]
         public string Apellidos { get; set; }
         [Column("nombres")]
-        public string Phone { get; set; }
+        public string Nombres { get; set; }
         [Column("fecha_nacimiento")]
-        public string Fecha_nacimiento {get; set;}
+        public string fecha_nacimiento { get; set; }
         [Column("dni")]
-        public string DNI {get; set; }     
+        public string dni {get; set; }     
         [Column("genero")]
-        public DateTime Genero { get; set; }
-        [Column("gender")]
-        public string Gender { get; set; }
+        public string Genero { get; set; }
+        [Column("carrera")]
+        public string Carrera { get; set; }
 
     }
 }

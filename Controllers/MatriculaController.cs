@@ -18,9 +18,9 @@ namespace demomvc.Controllers
             return View();
         }
 
-        public IActionResult Create(Alumno objAlumno)
+        public IActionResult Create(Matricula objMatricula)
         {
-            _context.Add(objAlumno);
+            _context.Add(objMatricula);
             _context.SaveChanges();
             ViewData["Message"] = "El alumno ya está registrado";
             return View("Index");
